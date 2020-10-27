@@ -3,7 +3,7 @@ An app built by FrontEnd Students in Mod3 designed to facilitate creativity and 
 
 ## Resources
 
-- (https://imgur.com/a/4tylJME)[Card art]
+- [Card art](https://imgur.com/a/4tylJME)
 
 ## Iteration 1 - Foundations
 
