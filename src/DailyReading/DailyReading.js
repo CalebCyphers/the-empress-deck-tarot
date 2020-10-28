@@ -1,11 +1,15 @@
 import React from 'react';
 import './DailyReading.css';
-import { Button, Alert } from 'react-bootstrap';
+import { Col, Row, Image } from 'react-bootstrap';
 
-export default function DailyReading() {
+export default function DailyReading(props) {
   return (
     <div>
-      <Button variant="success">Test Button</Button>
+      <Row>
+        <Col>
+          <Image width="350em" src={props.card.image} alt={props.card.title} rounded />
+        </Col>
+      </Row>
     </div>
   )
 }

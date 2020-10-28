@@ -3,6 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap'
 import Deck from '../Deck.js';
+import Loader from '../Loader/Loader.js'
 import DailyReading from '../DailyReading/DailyReading.js'
 
 class App extends Component {
@@ -15,25 +16,23 @@ class App extends Component {
   }
 
   render() { 
-
     if (!this.state.deck) {
+      return ( 
+      <div className="App">
+        <Container>
+          <Loader />
+        </Container>
+      </div> );
+    } else {
       return (
         <div className="App">
           <Container>
-            <DailyReading />
+            <DailyReading card={this.state.deck.getRandomCard()} />
           </Container>
         </div> );
-    } else {
-      return ( 
-        <div className="App">
-          <Container>
-            <img src={this.state.deck.getRandomCard().image} alt={this.state.deck.getRandomCard().title}></img>
-            <DailyReading />
-          </Container>
-        </div> )
     }
   }
 }
- 
+
 export default App;
 
