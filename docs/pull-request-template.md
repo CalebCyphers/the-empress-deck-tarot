@@ -24,3 +24,6 @@
 - [ ] I have updated the documentation accordingly.
 - [ ] I have added tests to cover my changes.
 - [ ] All new and existing tests passed.
+
+## Issues
+<!--- Here you can close issues using the format: '- Closes #42' -->
