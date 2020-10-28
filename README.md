@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Empress Tarot
+An app built by FrontEnd Students in Mod3 designed to facilitate creativity and the challenge of learning a new technology. The app will be designed to deliver a portable tarot journal where the user can easily do readings and log their own thoughts over time.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Resources
 
-## Available Scripts
+- [Card art](https://imgur.com/a/4tylJME)
 
-In the project directory, you can run:
+## Iteration 1 - Foundations
 
-### `npm start`
+#### Primary User Story: 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+When a user opens the webpage, they see a tarot card 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Steps
 
-### `npm test`
+- Begin research on Express. How does it work? What steps are required to host it? How does it speak to a website?
+- Design basic user interface. How does the website look in general? Create file structure and baseline componants using react. 
+- Get website to talk to website. Get a random card's info to display onto the webpage.
+- Get basic error handling into the website. What displayes when the promise isn't fulfilled? WHat displays when the website is loading? 
+- Test the heck out of it. Mock out some async integration tests with mocked datasets to verify the website's functionality. Design happy and sad path tests.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Iteration 2 - Card Database
 
-### `npm run build`
+#### Primary User Story:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+When on the website, the user sees a 'menu' icon. When the user clicks on the icon, a navigation menu appears. The user sees two options in the menu 'Daily Reading,' and 'Card Database.' When the user clicks on 'Card Database' they are routed to a page with a list of all of the cards from the database. When they click on a card, they see the card's art and info.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Build a navigation menu and interface.
+- Build out Router functionality for the multiple pages.
+- Populate the Card Database page with Card titles.
+- Build a 'card info' page that populates with the info of whatever card was clicked on. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Iteration 3 - Persistant data
 
-### `npm run eject`
+#### Primary User Story:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+A user can add a reflection under a card. When they click 'submit,' the website displays 'This reading has been added to your journal.' The User can navigate to a new 'Journal' page, and can see previous readings.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Build forms and inputs for reflections - text area? needs to be linked to 'state' somehow, data must persist when navigating around the website.
+- Build up the React Router and the componants required to display journal entries. 
+- Build a navbar so that the user can navigate to the Journal page
+- Link the Journal data to LocalStorage to make journal data persist on a device, even when the page reloads
