@@ -19,16 +19,26 @@ When a user opens the webpage, they see a tarot card
 - Get basic error handling into the website. What displayes when the promise isn't fulfilled? WHat displays when the website is loading? 
 - Test the heck out of it. Mock out some async integration tests with mocked datasets to verify the website's functionality. Design happy and sad path tests.
 
+#### What to Test
+
+- 
+
 ## Iteration 2 - Card Database
 
 #### Primary User Story:
 
 When on the website, the user sees a 'menu' icon. When the user clicks on the icon, a navigation menu appears. The user sees two options in the menu 'Daily Reading,' and 'Card Database.' When the user clicks on 'Card Database' they are routed to a page with a list of all of the cards from the database. When they click on a card, they see the card's art and info.
 
+#### Steps
+
 - Build a navigation menu and interface.
 - Build out Router functionality for the multiple pages.
 - Populate the Card Database page with Card titles.
 - Build a 'card info' page that populates with the info of whatever card was clicked on. 
+
+#### What to Test
+
+- card infor page should render each necessary section (subtitle, description)
 
 ## Iteration 3 - Persistant data
 
@@ -36,7 +46,14 @@ When on the website, the user sees a 'menu' icon. When the user clicks on the ic
 
 A user can add a reflection under a card. When they click 'submit,' the website displays 'This reading has been added to your journal.' The User can navigate to a new 'Journal' page, and can see previous readings.
 
+#### Steps
+
 - Build forms and inputs for reflections - text area? needs to be linked to 'state' somehow, data must persist when navigating around the website.
 - Build up the React Router and the componants required to display journal entries. 
 - Build a navbar so that the user can navigate to the Journal page
 - Link the Journal data to LocalStorage to make journal data persist on a device, even when the page reloads
+
+#### What to Test
+
+- journal entry submition function should run on click 
+- journal entries (and necessary components) are displayed 
