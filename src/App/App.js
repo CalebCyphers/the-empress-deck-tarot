@@ -5,13 +5,16 @@ import Deck from '../Deck.js';
 import DailyReading from '../DailyReading/DailyReading.js'
 
 const deck = new Deck()
-console.log(deck.getRandomCard());
+let randomCard = deck.getRandomCard();
 
 class App extends Component {
-  state = {  }
+  state = { 
+
+   }
   render() { 
     return ( 
     <div className="App">
+      <img src={randomCard.image} alt={randomCard.title}></img>
       <DailyReading />
     </div> );
   }
