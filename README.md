@@ -38,7 +38,7 @@ When on the website, the user sees a 'menu' icon. When the user clicks on the ic
 
 #### What to Test
 
-- 
+- card infor page should render each necessary section (subtitle, description)
 
 ## Iteration 3 - Persistant data
 
@@ -55,4 +55,5 @@ A user can add a reflection under a card. When they click 'submit,' the website 
 
 #### What to Test
 
-- 
+- journal entry submition function should run on click 
+- journal entries (and necessary components) are displayed 
