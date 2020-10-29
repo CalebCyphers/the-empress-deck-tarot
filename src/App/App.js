@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap'
-import Deck from '../Deck.js';
 import Loader from '../Loader/Loader.js'
 import DailyReading from '../DailyReading/DailyReading.js'
+import NavBar from '../NavBar/NavBar.js'
 import { fetchCards } from '../fetch/fetch-requests';
 
 class App extends Component {
@@ -30,6 +30,7 @@ class App extends Component {
       return (
         <div className="App">
           <Container>
+            <NavBar></NavBar>
             <DailyReading card={this.getRandomCard()} />
           </Container>
         </div> );
