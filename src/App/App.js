@@ -5,6 +5,7 @@ import { Container } from 'react-bootstrap'
 import Deck from '../Deck.js';
 import Loader from '../Loader/Loader.js'
 import DailyReading from '../DailyReading/DailyReading.js'
+import { fetchCards } from '../fetch/fetch-requests';
 
 class App extends Component {
   state = { 
@@ -12,8 +13,7 @@ class App extends Component {
    }
 
   componentDidMount(){
-    fetch('https://empress-tarot-api.herokuapp.com/cards')
-      .then(res => res.json())
+    fetchCards()
       .then(data => this.setState({ deck: data }))
       .catch(err => alert(err))
   }
