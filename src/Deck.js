@@ -7,8 +7,8 @@ class Deck {
         numeral: 'O',
         title: 'The Bard',
         image: 'https://i.imgur.com/QBKZRaT.jpg',
-        Theme: 'New Experiences',
-        Description: 'The carefree Bard symbolizes the beginning of a new adventure. Perhaps you are learning something new, meeting new people, or looking at a challenge with a newfound perspective.',
+        theme: 'New Experiences',
+        description: 'The carefree Bard symbolizes the beginning of a new adventure. Perhaps you are learning something new, meeting new people, or looking at a challenge with a newfound perspective.',
       },
       {
         id: 1,
@@ -16,8 +16,8 @@ class Deck {
         numeral: 'O',
         title: 'The Bard',
         image: 'https://i.imgur.com/QBKZRaT.jpg',
-        Theme: 'Recklessness',
-        Description: 'Now is the time to start something new, even if you are unsure of the outcome. Trust in your performance, but also take time to make sure that you are well prepared.'
+        theme: 'Recklessness',
+        description: 'Now is the time to start something new, even if you are unsure of the outcome. Trust in your performance, but also take time to make sure that you are well prepared.'
       },
       {
         id: 2,
@@ -25,8 +25,8 @@ class Deck {
         numeral: 'I',
         title: 'The Ranger',
         image: 'https://i.imgur.com/Oapu2gB.jpg',
-        Theme: 'Self-Reliance',
-        Description: 'The independent Ranger shines a light into the darkness. Although you walk alone, you are not afraid. You have a trusted companion who supports you on your journey, whether you know it or not.',
+        theme: 'Self-Reliance',
+        description: 'The independent Ranger shines a light into the darkness. Although you walk alone, you are not afraid. You have a trusted companion who supports you on your journey, whether you know it or not.',
       },
       {
         id: 3,
@@ -34,8 +34,8 @@ class Deck {
         numeral: 'I',
         title: 'The Ranger',
         image: 'https://i.imgur.com/Oapu2gB.jpg',
-        Theme: 'Isolation',
-        Description: 'Solitude has become desolation. Take the time and effort to reconnect with someone who has been a positive part of your journey.'
+        theme: 'Isolation',
+        description: 'Solitude has become desolation. Take the time and effort to reconnect with someone who has been a positive part of your journey.'
       },
       {
         id: 4,
@@ -43,9 +43,8 @@ class Deck {
         numeral: 'II',
         title: 'The Monk',
         image: 'https://i.imgur.com/T08I2Dp.jpg',
-        Theme: 'Balance',
-        Description: 'The duality of the Monk brings forces into balance. If you meditate on the inner truth, you can bring your mind and body into focus. Whatever challenge you face is intuitively achievable.',
-        reversedTheme: 'Withdrawl',
+        theme: 'Balance',
+        description: 'The duality of the Monk brings forces into balance. If you meditate on the inner truth, you can bring your mind and body into focus. Whatever challenge you face is intuitively achievable.',
       },
       {
         id: 5,
@@ -53,8 +52,8 @@ class Deck {
         numeral: 'II',
         title: 'The Monk',
         image: 'https://i.imgur.com/T08I2Dp.jpg',
-        Theme: 'Withdrawl',
-        Description: 'When your world is out of balance, withdraw into your inner sanctum in order to clear your mind and quiet the storm. You will be ready to face the tempest with renewed calm energy.'
+        theme: 'Withdrawl',
+        description: 'When your world is out of balance, withdraw into your inner sanctum in order to clear your mind and quiet the storm. You will be ready to face the tempest with renewed calm energy.'
       },
       {
         id: 6,
@@ -62,8 +61,8 @@ class Deck {
         numeral: 'III',
         title: 'The Fighter',
         image: 'https://i.imgur.com/hXdVi8B.jpg',
-        Theme: 'Commander',
-        Description: 'The Fighter is a natural leader and protector. You are unafraid of conflict, and your life experience grows because of it. You seek fairness and peace, although there is often turmoil in your path.',
+        theme: 'Commander',
+        description: 'The Fighter is a natural leader and protector. You are unafraid of conflict, and your life experience grows because of it. You seek fairness and peace, although there is often turmoil in your path.',
       },
       {
         id: 7,
@@ -71,8 +70,8 @@ class Deck {
         numeral: 'III',
         title: 'The Fighter',
         image: 'https://i.imgur.com/hXdVi8B.jpg',
-        reversedTheme: 'Warmaker',
-        reversedDescription: 'Beware an ascent into tyranny. Are you restricting the freedoms of another for your own benefit? Or perhaps there is a different figure of authority in your life that you must fight to dethrone.'
+        theme: 'Warmaker',
+        description: 'Beware an ascent into tyranny. Are you restricting the freedoms of another for your own benefit? Or perhaps there is a different figure of authority in your life that you must fight to dethrone.'
       },
     ];
   }

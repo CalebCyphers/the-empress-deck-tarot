@@ -12,7 +12,10 @@ class App extends Component {
    }
 
   componentDidMount(){
-    this.setState({ deck: new Deck() })
+    fetch('https://empress-tarot-api.herokuapp.com/cards')
+      .then(res => res.json())
+      .then(data => this.setState({ deck: data }))
+      .catch(err => alert(err))
   }
 
   render() { 
@@ -27,10 +30,15 @@ class App extends Component {
       return (
         <div className="App">
           <Container>
-            <DailyReading card={this.state.deck.getRandomCard()} />
+            <DailyReading card={this.getRandomCard()} />
           </Container>
         </div> );
     }
+  }
+
+  getRandomCard() {
+    let randomindex = Math.floor((Math.random() * this.state.deck.length));
+    return this.state.deck[randomindex]
   }
 }
 
