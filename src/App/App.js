@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap'
+import Deck from '../Deck.js';
 import Loader from '../Loader/Loader.js'
 import DailyReading from '../DailyReading/DailyReading.js'
-import NavBar from '../NavBar/NavBar.js'
-import { fetchCards } from '../fetch/fetch-requests';
 
 class App extends Component {
   state = { 
@@ -13,7 +12,8 @@ class App extends Component {
    }
 
   componentDidMount(){
-    fetchCards()
+    fetch('https://empress-tarot-api.herokuapp.com/cards')
+      .then(res => res.json())
       .then(data => this.setState({ deck: data }))
       .catch(err => alert(err))
   }
@@ -30,7 +30,6 @@ class App extends Component {
       return (
         <div className="App">
           <Container>
-            <NavBar></NavBar>
             <DailyReading card={this.getRandomCard()} />
           </Container>
         </div> );
