@@ -16,7 +16,7 @@ class NavBar extends Component {
             <header className="navbar">
                 <NavLink to="/dailyreading" className="header-link header-daily-reading">Daily Reading</NavLink>
                 <NavLink to="" className="header-link header-my-journal">My Journal</NavLink>
-                <NavLink to="" className="header-link header-card-database">Card Database</NavLink>
+                <NavLink to="/database" className="header-link header-card-database">Card Database</NavLink>
             </header>
         )
     }
