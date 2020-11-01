@@ -6,6 +6,7 @@ import Loader from '../Loader/Loader.js'
 import DailyReading from '../DailyReading/DailyReading.js'
 import NavBar from '../NavBar/NavBar.js'
 import { fetchCards } from '../fetch/fetch-requests';
+import { Route } from 'react-router-dom';
 
 class App extends Component {
   state = { 
@@ -33,6 +34,9 @@ class App extends Component {
             <NavBar></NavBar>
             <DailyReading card={this.getRandomCard()} />
           </Container>
+          <Route exact path ='/database'>
+            <Database />
+          </Route>
         </div> );
     }
   }
