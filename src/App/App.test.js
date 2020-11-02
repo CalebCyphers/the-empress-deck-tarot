@@ -1,28 +1,38 @@
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import "jest-environment-jsdom-sixteen";
 import App from './App';
-jest.mock('./apiCalls.js');
+import { fetchCards } from '../fetch/fetch-requests';
+jest.mock('../fetch/fetch-requests');
 
 describe('App', () => {
-  it('should get a random card', async () => {
-    getRandomCard.mockResolvedValue({card: {
-        "id": 40,
-        "reversed": false,
-        "numeral": "XX",
-        "title": "The Dragon",
-        "image": "https://i.imgur.com/poQ2dmX.jpg",
-        "theme": "Abundance",
-        "description": "The Dragon symbolizes fertility and abundance. Take stock of the bounty that surrounds you and be grateful for what you have, for genuine appreciation will bring more good things into your life."
-        }
-    })
+  it('should render a loader when there is no deck data', () => {
+    fetchCards.mockResolvedValueOnce(undefined)
     render (
       <App/>
     )
-    expect(getRandomCard).toHaveBeenCalledTimes(1)
-    const cardTitle = await waitFor(() => screen.getByText("The Dragon"));
+    // test that once loader componenent has been am
+    expect(screen.getByText('Loading')).toBeInTheDocument()
 
-    expect(cardTitle).toBeInTheDocument();
+  })
+  it('should render a random card reading when it has deck data', async () => {
+    fetchCards.mockResolvedValueOnce([  
+      {
+        "id": 1,
+        "reversed": true,
+        "numeral": "O",
+        "title": "The Bard",
+        "image": "https://i.imgur.com/QBKZRaT.jpg",
+        "theme": "Recklessness",
+        "description": "Now is the time to start something new, even if you are unsure of the outcome. Trust in your performance, but also take time to make sure that you are well prepared."
+      }
+    ])
+
+    render(
+      <App />
+    )
+    const cardName = await waitFor(() => screen.getByText('The Bard (reversed)'));
+    expect(cardName).toBeInTheDocument();
+
   })
 })
