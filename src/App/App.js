@@ -9,7 +9,7 @@ import { fetchCards } from '../fetch/fetch-requests';
 
 class App extends Component {
   state = { 
-
+    deck: undefined
    }
 
   componentDidMount(){
