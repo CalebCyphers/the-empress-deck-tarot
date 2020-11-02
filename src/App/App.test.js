@@ -6,6 +6,8 @@ import { fetchCards } from '../fetch/fetch-requests';
 jest.mock('../fetch/fetch-requests');
 
 describe('App', () => {
+
+
   it('should render a loader when there is no deck data', () => {
     fetchCards.mockResolvedValueOnce(undefined)
     render (
@@ -15,6 +17,7 @@ describe('App', () => {
     expect(screen.getByText('Loading')).toBeInTheDocument()
 
   })
+
   it('should render a random card reading when it has deck data', async () => {
     fetchCards.mockResolvedValueOnce([  
       {
