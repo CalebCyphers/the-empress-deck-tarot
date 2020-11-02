@@ -15,13 +15,9 @@ describe('DailyReading', () => {
     }
 
   let mockCardReversed = {
-    "id": 0,
     "reversed": true,
-    "numeral": "O",
-    "title": "The Bard",
     "image": "https://i.imgur.com/QBKZRaT.jpg",
-    "theme": "New Experiences",
-    "description": "The carefree Bard symbolizes the beginning of a new adventure. Perhaps you are learning something new, meeting new people, or looking at a challenge with a newfound perspective."
+    "title": "The Bard",
     }
 
     beforeEach(() => {
@@ -56,6 +52,11 @@ describe('DailyReading', () => {
 
     it('Should display the cards theme', () => {
       let cardTheme = screen.getByRole('heading', { name: /new experiences/i })
+      expect(cardTheme).toBeInTheDocument()
+    })
+
+    it('Should display the cards description', () => {
+      let cardTheme = screen.getByText(/The carefree Bard symbolizes the beginning of a new adventure. Perhaps you are learning something new, meeting new people, or looking at a challenge with a newfound perspective./i)
       expect(cardTheme).toBeInTheDocument()
     })
 })
