@@ -1,22 +1,28 @@
 import React, { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container } from 'react-bootstrap'
-import Loader from '../Loader/Loader.js'
-import DailyReading from '../DailyReading/DailyReading.js'
-import NavBar from '../NavBar/NavBar.js'
+import { Container } from 'react-bootstrap';
+import Loader from '../Loader/Loader.js';
+import DailyReading from '../DailyReading/DailyReading.js';
+import Database from '../Database/Database.js';
+import NavBar from '../NavBar/NavBar.js';
 import { fetchCards } from '../fetch/fetch-requests';
 import { Route } from 'react-router-dom';
 
 class App extends Component {
-  state = { 
+ state = {
 
-   }
-
-  componentDidMount(){
+ }
+      
+  componentDidMount = () => {
     fetchCards()
       .then(data => this.setState({ deck: data }))
-      .catch(err => alert(err))
+      .catch(err => console.log(err));
+  }
+
+  getRandomCard() {
+    let randomindex = Math.floor((Math.random() * this.state.deck.length));
+    return this.state.deck[randomindex]
   }
 
   render() { 
@@ -26,7 +32,8 @@ class App extends Component {
         <Container>
           <Loader />
         </Container>
-      </div> );
+      </div> 
+      );
     } else {
       return (
         <div className="App">
@@ -37,15 +44,12 @@ class App extends Component {
           <Route exact path ='/database'>
             <Database />
           </Route>
-        </div> );
+        </div> 
+      );
+    }
     }
   }
 
-  getRandomCard() {
-    let randomindex = Math.floor((Math.random() * this.state.deck.length));
-    return this.state.deck[randomindex]
-  }
-}
 
 export default App;
 
