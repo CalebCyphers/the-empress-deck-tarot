@@ -14,7 +14,7 @@ describe('App', () => {
       <App/>
     )
     // test that once loader componenent has been am
-    expect(screen.getByText('Loading')).toBeInTheDocument()
+    expect(screen.getByText('Loading...')).toBeInTheDocument()
 
   })
 

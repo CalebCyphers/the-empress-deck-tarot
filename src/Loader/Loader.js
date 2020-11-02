@@ -4,6 +4,6 @@ import { Alert } from 'react-bootstrap';
 
 export default function Loader() {
   return(
-    <Alert>Loading</Alert>
+    <Alert variant="light">Loading...</Alert>
   )
 }
