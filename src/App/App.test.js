@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
+import { BrowserRouter as Router, Route, Switch, Redirect, MemoryRouter } from 'react-router-dom';
 import '@testing-library/jest-dom';
 import App from './App';
 import { fetchCards } from '../fetch/fetch-requests';
@@ -23,7 +24,9 @@ describe('App', () => {
   it('should render a loader when there is no deck data', () => {
     fetchCards.mockResolvedValueOnce(undefined)
     render (
-      <App/>
+      <MemoryRouter>
+        <App/>
+      </MemoryRouter>
     )
     expect(screen.getByText('Loading...')).toBeInTheDocument()
   })
@@ -31,7 +34,9 @@ describe('App', () => {
   it('should render a random card reading when it has deck data', async () => {
     fetchCards.mockResolvedValueOnce(mockData)
     render(
-      <App />
+      <MemoryRouter>
+        <App/>
+      </MemoryRouter>
     )
     const cardName = await waitFor(() => screen.getByText('The Bard (reversed)'))
     expect(cardName).toBeInTheDocument();
@@ -40,7 +45,9 @@ describe('App', () => {
   it('should render the navbar', async () => {
     fetchCards.mockResolvedValueOnce(mockData)
     render(
-      <App />
+      <MemoryRouter>
+        <App/>
+      </MemoryRouter>
     )
     let navbar = await waitFor(() => screen.getByRole('banner'))
     expect(navbar).toBeInTheDocument()
