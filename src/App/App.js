@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import Loader from '../Loader/Loader.js'
 import DailyReading from '../DailyReading/DailyReading.js'
 import NavBar from '../NavBar/NavBar.js'
 import { fetchCards } from '../fetch/fetch-requests';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import CardDatabase from '../CardDatabase/CardDatabase.js'
 
 class App extends Component {
   state = { 
@@ -22,18 +24,43 @@ class App extends Component {
     if (!this.state.deck) {
       return ( 
       <div className="App">
-        <Container>
           <Loader />
-        </Container>
       </div> );
     } else {
       return (
-        <div className="App">
-          <Container>
-            <NavBar></NavBar>
-            <DailyReading card={this.getRandomCard()} />
+        <Router>
+          <div className="App">
+            <Route exact path="/" render={props => (
+              <Container>
+                <Row>
+                  <Col>
+                    <NavBar></NavBar>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <DailyReading card={this.getRandomCard()} />
+                  </Col>
+                </Row>
+              </Container>
+            )} />
+            <Route exact path="/database" render={props => (
+            <Container>
+            <Row>
+              <Col>
+                <NavBar></NavBar>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <CardDatabase />
+              </Col>
+            </Row>
           </Container>
-        </div> );
+          )} />
+          </div>
+        </Router>
+     );
     }
   }
 
