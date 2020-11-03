@@ -46,18 +46,13 @@ class App extends Component {
               </Container>
             )} />
             <Route exact path="/database" render={props => (
-            <Container>
-            <Row>
-              <Col>
+            
+              <section>
                 <NavBar />
-              </Col>
-            </Row>
-            <Row>
-              <Col>
                 <CardDatabase deck={this.state.deck} />
-              </Col>
-            </Row>
-          </Container>
+              </section>
+
+          
           )} />
           <Route exact path="/database/:cardId" 
             render={({ match }) => {
