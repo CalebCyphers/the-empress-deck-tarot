@@ -48,12 +48,12 @@ class App extends Component {
             <Container>
             <Row>
               <Col>
-                <NavBar></NavBar>
+                <NavBar />
               </Col>
             </Row>
             <Row>
               <Col>
-                <CardDatabase />
+                <CardDatabase deck={this.state.deck} />
               </Col>
             </Row>
           </Container>
