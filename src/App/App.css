@@ -1,6 +1,16 @@
+.ColorScheme {
+  color: #0f003d;
+  color: #160559;
+  color: #1c1570;
+  color: #ffe500;
+  color: #ffd000;
+  background-color: #d2ac03;
+  color: #1d0772;
+}
+
 .App {
   text-align: center;
-  background-color: #282c34;
+  background-color: #231c35;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
