@@ -59,22 +59,12 @@ class App extends Component {
             </Row>
           </Container>
           )} />
-          <Route exact path="/database/:cardId" render={({ match }) => {
-            const { cardId } = match.params;
-            <Container>
-            <Row>
-              <Col>
-                <NavBar />
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <CardPage />
-              </Col>
-            </Row>
-          </Container>
-          } 
-          } />
+          <Route exact path="/database/:cardId" 
+            render={({ match }) => {
+              const { cardId } = match.params;
+              return <CardPage thisCardId={cardId}/>
+            }} 
+          />
           </div>
         </Router>
      );

@@ -4,30 +4,39 @@ import { Col, Row, Image } from 'react-bootstrap';
 import { PropTypes } from 'prop-types';
 import { fetchCard } from '../fetch/fetch-requests';
 import CardDatabase from '../CardDatabase/CardDatabase.js'
+import { ThemeConsumer } from 'react-bootstrap/esm/ThemeProvider';
+import { Link } from 'react-router-dom';
 
 class CardPage extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            card: undefined,
-            id: this.card.id,
+            currentCardId: this.props.thisCardId,
+            card:'',
         }
     }
 
-    componentDidMount(id) {
-        const cardId = this.state.id;
-        fetchCard(id)
-            .then(data => this.setState({ card: data}))
-            .then(console.log(this.state))
-            .catch(err => alert(err));
+    componentDidMount() {
+        fetchCard(this.state.currentCardId)
+            .then(data => this.setState({ card: data }))
+            .catch(err => alert(err))
     }
 
     render() {
+        let tarot = this.state.card;
         return (
+            
             <main>
-
+                <section className='cardpage-info'>
+                    <p>{tarot.title}</p>
+                    <p>{tarot.numeral}</p>
+                    <img src={tarot.image} />
+                    <p>{tarot.theme}</p>
+                    <p>{tarot.description}</p>
+                    <Link to='/database'>Back</Link>
+                </section>
             </main>
-            )
+        )
     }
 
  }
