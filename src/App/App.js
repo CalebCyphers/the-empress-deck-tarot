@@ -12,7 +12,8 @@ import CardPage from '../CardPage/CardPage.js';
 
 class App extends Component {
   state = { 
-    deck: undefined
+    deck: undefined,
+    journalEntries: []
    }
 
   componentDidMount(){
@@ -61,6 +62,14 @@ class App extends Component {
   getRandomCard() {
     let randomindex = Math.floor((Math.random() * this.state.deck.length));
     return this.state.deck[randomindex]
+  }
+
+  getJournal() {
+    this.setState({ journalEntries: JSON.parse(localStorage.getItem('journal')) })
+  }
+
+  saveJournal() {
+    localStorage.setItem('journal', JSON.stringify(this.state.journalEntries));
   }
 }
 
