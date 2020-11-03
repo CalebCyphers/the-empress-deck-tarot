@@ -32,18 +32,10 @@ class App extends Component {
         <Router>
           <div className="App">
             <Route exact path="/" render={props => (
-              <Container>
-                <Row>
-                  <Col>
-                    <NavBar></NavBar>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col>
-                    <DailyReading card={this.getRandomCard()} />
-                  </Col>
-                </Row>
-              </Container>
+              <section>
+                <NavBar></NavBar>
+                <DailyReading card={this.getRandomCard()} />
+              </section>
             )} />
             <Route exact path="/database" render={props => (
             
