@@ -8,6 +8,7 @@ import NavBar from '../NavBar/NavBar.js'
 import { fetchCards } from '../fetch/fetch-requests';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import CardDatabase from '../CardDatabase/CardDatabase.js'
+import CardPage from '../CardPage/CardPage.js';
 
 class App extends Component {
   state = { 
@@ -58,6 +59,22 @@ class App extends Component {
             </Row>
           </Container>
           )} />
+          <Route exact path="/database/:cardId" render={({ match }) => {
+            const { cardId } = match.params;
+            <Container>
+            <Row>
+              <Col>
+                <NavBar />
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <CardPage />
+              </Col>
+            </Row>
+          </Container>
+          } 
+          } />
           </div>
         </Router>
      );
