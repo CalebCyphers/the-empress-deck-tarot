@@ -1,6 +1,7 @@
 import React from 'react';
 import './DailyReading.css';
 import { Col, Row, Image } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 export default function DailyReading(props) {
   if (!props.card.reversed) {
@@ -64,4 +65,8 @@ export default function DailyReading(props) {
       </div>
     )
   }
+}
+
+DailyReading.propTypes = {
+  card: PropTypes.object
 }
