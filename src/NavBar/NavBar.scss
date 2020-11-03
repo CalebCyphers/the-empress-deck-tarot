@@ -1,18 +1,32 @@
 .navbar {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     font-family: Aclonica;
-    color: white;
-    background-color: black;
+    background-color: #ffd000;
+    margin-bottom: 3%;
+    padding: none!important;
+
+
 
     :hover {
-        color: red;
-    }
+      font-weight: bold;
+  }
 
-    .header-link {
-      min-width: 350px; 
-      width: 100%;
-      border-bottom: 3px solid white;
-      margin: non 
-    }
+
+
+}
+
+.header-link {
+  color: #160559;
+  min-width: 350px; 
+  width: 100%;
+  border-bottom: 3px solid white;
+  text-decoration: none;
+  padding: 1%;
+
+  :hover {
+    font-weight: bold;
+}
+
 }
