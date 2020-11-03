@@ -2,11 +2,13 @@ import React from 'react';
 import './DailyReading.css';
 import { Col, Row, Image, InputGroup, FormControl, Container, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import ReflectionForm from '../ReflectionForm/ReflectionForm.js'
 
 export default function DailyReading(props) {
   if (!props.card.reversed) {
     return (
       <div>
+        <Container>
         <Row>
           <Col>
             <h1>{props.card.numeral}</h1>
@@ -32,6 +34,8 @@ export default function DailyReading(props) {
             <p>{props.card.description}</p>
           </Col>
         </Row>
+        <ReflectionForm handleChange={props.handleChange}/>
+        </Container>
       </div>
     )
   } else {
@@ -63,17 +67,7 @@ export default function DailyReading(props) {
               <p>{props.card.description}</p>
             </Col>
           </Row>
-            <InputGroup>
-              <InputGroup.Prepend>
-                <InputGroup.Text>Put your own personal reflections here</InputGroup.Text>
-              </InputGroup.Prepend>
-              <FormControl as="textarea" aria-label="Put your own personal reflections here" />
-            </InputGroup>
-          <Row>
-            <Col>
-              <Button variant="outline-warning">Submit</Button>{' '}
-            </Col>
-          </Row>
+          <ReflectionForm handleChange={props.handleChange}/>
         </Container>
       </div>
     )

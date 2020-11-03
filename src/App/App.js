@@ -11,12 +11,16 @@ import CardDatabase from '../CardDatabase/CardDatabase.js'
 import CardPage from '../CardPage/CardPage.js';
 
 class App extends Component {
-  state = { 
-    deck: undefined,
-    journalEntries: []
-   }
+  constructor() {
+    super()
+    this.state = { 
+      deck: undefined,
+      journalEntries: []
+     }
+  }
 
   componentDidMount(){
+    this.getJournal()
     fetchCards()
       .then(data => this.setState({ deck: data }))
       .catch(err => alert(err))
@@ -35,7 +39,7 @@ class App extends Component {
             <Route exact path="/" render={props => (
               <section>
                 <NavBar></NavBar>
-                <DailyReading card={this.getRandomCard()} />
+                <DailyReading handleChange={this.handleChange} card={this.getRandomCard()} />
               </section>
             )} />
             <Route exact path="/database" render={props => (
@@ -70,6 +74,13 @@ class App extends Component {
 
   saveJournal() {
     localStorage.setItem('journal', JSON.stringify(this.state.journalEntries));
+  }
+
+  handleChange(event) {
+    // let name = event.target.name;
+    // this.setState({ reflection: event.target.value})
+    this.setState({ reflection: event.target.value}) 
+    // console.log(this.state.reflection)
   }
 }
 
