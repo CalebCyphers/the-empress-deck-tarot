@@ -32,49 +32,26 @@ class App extends Component {
         <Router>
           <div className="App">
             <Route exact path="/" render={props => (
-              <Container>
-                <Row>
-                  <Col>
-                    <NavBar></NavBar>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col>
-                    <DailyReading card={this.getRandomCard()} />
-                  </Col>
-                </Row>
-              </Container>
+              <section>
+                <NavBar></NavBar>
+                <DailyReading card={this.getRandomCard()} />
+              </section>
             )} />
             <Route exact path="/database" render={props => (
-            <Container>
-            <Row>
-              <Col>
+            
+              <section>
                 <NavBar />
-              </Col>
-            </Row>
-            <Row>
-              <Col>
                 <CardDatabase deck={this.state.deck} />
-              </Col>
-            </Row>
-          </Container>
+              </section>
+
+          
           )} />
-          <Route exact path="/database/:cardId" render={({ match }) => {
-            const { cardId } = match.params;
-            <Container>
-            <Row>
-              <Col>
-                <NavBar />
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <CardPage />
-              </Col>
-            </Row>
-          </Container>
-          } 
-          } />
+          <Route exact path="/database/:cardId" 
+            render={({ match }) => {
+              const { cardId } = match.params;
+              return <CardPage thisCardId={cardId}/>
+            }} 
+          />
           </div>
         </Router>
      );
