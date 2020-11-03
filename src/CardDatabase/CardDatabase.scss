@@ -1,0 +1,16 @@
+.cards {
+    p {
+        :hover {
+            font-weight: bold;
+            color: #ffe500;
+        }
+    }
+}
+
+.card-link {
+    color: white;
+
+    :hover {
+        font-weight: bold;
+    }
+}
