@@ -45,7 +45,15 @@ describe('CardDatabase', () => {
     expect(reverseText).toBeInTheDocument()
   })
 
-  it('should route to a card when its title is clicked', () => {
+  // it('should route to a card when its title is clicked', async () => {
+  //   render(
+  //     <Router>
+  //       <CardDatabase deck={mockDeck} />
+  //     </Router>
+  //   )
+  //   userEvent.click(screen.getByText('The Cleric'))
 
-  })
+  //   const cardTheme = await waitFor(() => (screen.getByText('Wisdom')))
+  //   expect(cardTheme).toBeInTheDocument()
+  // })
 })
