@@ -4,7 +4,6 @@ import { Col, Row, Image } from 'react-bootstrap';
 import { PropTypes } from 'prop-types';
 import { fetchCard } from '../fetch/fetch-requests';
 import CardDatabase from '../CardDatabase/CardDatabase.js'
-import { ThemeConsumer } from 'react-bootstrap/esm/ThemeProvider';
 import { Link } from 'react-router-dom';
 
 class CardPage extends Component {
