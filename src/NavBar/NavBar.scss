@@ -1,32 +1,37 @@
-.navbar {
+.header {
+  font-size: 1.3em;
+    width: 100%;
+    align-content: center;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     flex-wrap: wrap;
-    font-family: Aclonica;
+    font-family: Karla, sans serif;
     background-color: #d2ac03;
     margin-bottom: 3%;
     padding: none !important;
 
 
 
-    :hover {
-      font-weight: bold;
-  }
+    
 
+    a:hover {
+      transform: scale(1.1);
+      font-weight: 700;
+      color: #1d0772;
+      text-decoration: none;
+      transition-duration: .6s;
+    
+  }
 
 
 }
 
 .header-link {
   color: #1d0772;
-  min-width: 350px; 
-  width: 100%;
-  border-bottom: 3px solid rgb(31, 5, 5);
+  min-width: 300px; 
+  align-self: center;
   text-decoration: none;
-  padding: 1%;
-
-  :hover {
-    font-weight: bold;
-}
+  padding: 1.3%;
 
 }
