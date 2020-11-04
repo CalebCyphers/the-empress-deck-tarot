@@ -19,6 +19,7 @@ export default class ReflectionForm extends Component {
     }})
     let newArray = this.props.journalEntries.concat(this.state.newEntry)
     this.props.updateState(newArray)
+    this.setState({ reflection: '' })
   }
 
   reflectionUpdate = (event) => {
