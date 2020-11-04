@@ -49,7 +49,7 @@ describe('App', () => {
         <App/>
       </MemoryRouter>
     )
-    let navbar = await waitFor(() => screen.getByRole('banner'))
+    let navbar = await waitFor(() => screen.getByText('My Journal'))
     expect(navbar).toBeInTheDocument()
   })
 })
