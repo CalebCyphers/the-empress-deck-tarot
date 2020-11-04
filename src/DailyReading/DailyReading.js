@@ -34,7 +34,7 @@ export default function DailyReading(props) {
             <p>{props.card.description}</p>
           </Col>
         </Row>
-        <ReflectionForm handleChange={props.handleChange}/>
+        <ReflectionForm journalEntries={props.journalEntries} updateState={props.updateState} card={props.card} />
         </Container>
       </div>
     )
@@ -67,7 +67,7 @@ export default function DailyReading(props) {
               <p>{props.card.description}</p>
             </Col>
           </Row>
-          <ReflectionForm handleChange={props.handleChange}/>
+          <ReflectionForm journalEntries={props.journalEntries} updateState={props.updateState} card={props.card} />
         </Container>
       </div>
     )
