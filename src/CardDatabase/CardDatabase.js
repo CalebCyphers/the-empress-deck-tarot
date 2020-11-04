@@ -1,6 +1,6 @@
 import React from 'react';
 import './CardDatabase.scss';
-import { Col, Row, Image } from 'react-bootstrap';
+// import { Image } from 'react-bootstrap';
 import { PropTypes } from 'prop-types';
 import { Link } from 'react-router-dom';
 
@@ -17,8 +17,8 @@ export default function CardDatabase(props) {
             reverseStatus = ''
           }
           return (
-            <p>
-              <Link className='card-link' key={card.id} to={'/database/'+cardId}>{`${card.title} ${reverseStatus}`}</Link> 
+            <p key={card.id}>
+              <Link className='card-link' to={'/database/'+cardId}>{`${card.title} ${reverseStatus}`}</Link> 
             </p>
           )
         })
