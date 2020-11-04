@@ -6,11 +6,22 @@ export default class ReflectionForm extends Component {
   constructor(props) {
     super(props)
     this.state = { 
-      reflection: ''
+      reflection: '',
+      newEntry: {}
      }
   }
 
-  reflectionUpdate(event) {
+  buildJournalEntry = async (text, card) => {
+    await this.setState({ newEntry: {
+      id: Date.now(),
+      text: text,
+      card: card
+    }})
+    let newArray = this.props.journalEntries.concat(this.state.newEntry)
+    this.props.updateState(newArray)
+  }
+
+  reflectionUpdate = (event) => {
     this.setState({[event.target.name]: event.target.value});
     console.log(this.state.reflection)
   }
@@ -26,7 +37,9 @@ export default class ReflectionForm extends Component {
       </InputGroup>
       <Row>
         <Col>
-          <Button variant="outline-warning">Submit</Button>{' '}
+          <Button onClick={(event) => {
+            this.buildJournalEntry(this.state.reflection, this.props.card)
+            }}variant="outline-warning">Submit</Button>{' '}
         </Col>
       </Row>
     </div>)
