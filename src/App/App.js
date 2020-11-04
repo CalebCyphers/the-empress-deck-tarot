@@ -9,6 +9,7 @@ import { fetchCards } from '../fetch/fetch-requests';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import CardDatabase from '../CardDatabase/CardDatabase.js'
 import CardPage from '../CardPage/CardPage.js';
+import Journal from '../Journal/Journal.js';
 
 class App extends Component {
   constructor() {
@@ -63,20 +64,19 @@ class App extends Component {
               </section>
             )} />
             <Route exact path="/database" render={props => (
-            
               <section>
                 <NavBar />
                 <CardDatabase deck={this.state.deck} />
               </section>
-
-          
-          )} />
+            )} />
           <Route exact path="/database/:cardId" 
             render={({ match }) => {
               const { cardId } = match.params;
               return <CardPage thisCardId={cardId}/>
-            }} 
-          />
+            }} />
+            <Route exact path="/journal" render={() => {
+              return <Journal journalEntries={this.state.journalEntries} />
+            }}/>
           </div>
         </Router>
      );
