@@ -1,10 +1,7 @@
 import { React, Component } from 'react';
 import './CardPage.scss';
-import { Col, Row, Image } from 'react-bootstrap';
 import { PropTypes } from 'prop-types';
 import { fetchCard } from '../fetch/fetch-requests';
-import CardDatabase from '../CardDatabase/CardDatabase.js'
-import { ThemeConsumer } from 'react-bootstrap/esm/ThemeProvider';
 import { Link } from 'react-router-dom';
 
 class CardPage extends Component {
@@ -26,27 +23,27 @@ class CardPage extends Component {
         let tarot = this.state.card;
         if(!tarot.reversed) {
         return (
-            <main>
+            <main className='individual-card'>
                 <section className='cardpage-info'>
-                    <p>{tarot.title}</p>
-                    <p>{tarot.numeral}</p>
-                    <img src={tarot.image} />
-                    <p>{tarot.theme}</p>
-                    <p>{tarot.description}</p>
-                    <Link to='/database'>Back</Link>
+                    <p className='tarot-title'>{tarot.title}</p>
+                    <p className='tarot-numeral'>{tarot.numeral}</p>
+                    <img className='tarot-image' src={tarot.image} />
+                    <p className='tarot-theme'>{tarot.theme}</p>
+                    <p className='tarot-description'>{tarot.description}</p>
+                    <Link className='tarot-back' to='/database'>Back</Link>
                 </section>
             </main>
          )
         } else {
             return (
-                <main>
+                <main className='individual-card'>
                     <section className='cardpage-info'>
-                        <p>{tarot.title}</p>
-                        <p>{tarot.numeral}</p>
-                        <img style= {{transform: 'rotate(180deg)'}} src={tarot.image} />
-                        <p>{tarot.theme}</p>
-                        <p>{tarot.description}</p>
-                        <Link to='/database'>Back</Link>
+                        <p className='tarot-title'>{tarot.title}</p>
+                        <p className='tarot-numeral'>{tarot.numeral}</p>
+                        <img className='tarot-image-reversed' src={tarot.image} />
+                        <p className='tarot-theme'>{tarot.theme}</p>
+                        <p className='tarot-description'>{tarot.description}</p>
+                        <Link className='tarot-back' to='/database'>Back</Link>
                     </section>
                 </main>
              )
