@@ -13,14 +13,14 @@ export default function CardDatabase(props) {
           let reverseStatus;
           //console.log(card); CHECKING TO SEE IF CARD DATA IS BEING CALLED
           if (card.reversed) {
-            reverseStatus = 'reversed'
+            //reverseStatus = 'reversed'
             reverseStatus = <MaterialIcon color='white' icon='autorenew' />
           } else {
             reverseStatus = ''
           }
           return (
             <p>
-              <Link className='card-link' key={card.id} to={'/database/'+cardId}>{`${card.numeral}. ${card.title}`} <a>{reverseStatus}</a></Link> 
+              <Link className='card-link' key={cardId} to={'/database/'+cardId}>{`${card.numeral}. ${card.title}`} {reverseStatus}</Link> 
             </p>
           )
         })
