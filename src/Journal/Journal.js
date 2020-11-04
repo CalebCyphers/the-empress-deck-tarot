@@ -1,5 +1,5 @@
 import React from 'react';
-import './Journal.scss';
+// import './Journal.scss';
 import { Col, Row, Image, Card } from 'react-bootstrap';
 import { PropTypes } from 'prop-types';
 import { Link } from 'react-router-dom';
