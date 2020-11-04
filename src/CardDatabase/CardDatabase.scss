@@ -1,15 +1,23 @@
 .cards {
+    text-align: left;
+    padding: 4%;
     p {
+        
+        padding: 2% 1% 2% 2%;
+        margin: 0% 1% 0% 1%;
+        border-bottom: silver 2px solid;
         :hover {
             font-weight: bold;
             color: #ffe500;
+            
         }
     }
 }
 
+
 .card-link {
     color: white;
-
+    
     :hover {
         font-weight: bold;
     }
