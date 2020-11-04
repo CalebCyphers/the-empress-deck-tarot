@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Switch, Redirect, MemoryRouter } from '
 import '@testing-library/jest-dom';
 import App from './App';
 import { fetchCards } from '../fetch/fetch-requests';
+import userEvent from '@testing-library/user-event';
+
 jest.mock('../fetch/fetch-requests');
 
 describe('App', () => {
