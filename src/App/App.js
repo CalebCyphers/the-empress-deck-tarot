@@ -74,9 +74,12 @@ class App extends Component {
               const { cardId } = match.params;
               return <CardPage thisCardId={cardId}/>
             }} />
-            <Route exact path="/journal" render={() => {
-              return <Journal journalEntries={this.state.journalEntries} />
-            }}/>
+            <Route exact path="/journal" render={() => (
+              <Container>
+                <NavBar />
+                <Journal journalEntries={this.state.journalEntries} />
+              </Container>
+            )}/>
           </div>
         </Router>
      );
