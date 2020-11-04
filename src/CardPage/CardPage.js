@@ -24,8 +24,8 @@ class CardPage extends Component {
 
     render() {
         let tarot = this.state.card;
+        if(!tarot.reversed) {
         return (
-            
             <main>
                 <section className='cardpage-info'>
                     <p>{tarot.title}</p>
@@ -36,7 +36,21 @@ class CardPage extends Component {
                     <Link to='/database'>Back</Link>
                 </section>
             </main>
-        )
+         )
+        } else {
+            return (
+                <main>
+                    <section className='cardpage-info'>
+                        <p>{tarot.title}</p>
+                        <p>{tarot.numeral}</p>
+                        <img style= {{transform: 'rotate(180deg)'}} src={tarot.image} />
+                        <p>{tarot.theme}</p>
+                        <p>{tarot.description}</p>
+                        <Link to='/database'>Back</Link>
+                    </section>
+                </main>
+             )
+        }
     }
 
  }
