@@ -52,7 +52,7 @@ export default class ReflectionForm extends Component {
   }
 }
 
-ReflectionForm.prototype = {
+ReflectionForm.proptype = {
   card: PropTypes.object,
   journalEntries: PropTypes.array,
   updateState: PropTypes.func
