@@ -1,15 +1,28 @@
 .cards {
+    text-align: left;
+    padding: 4%;
+    font-family: Karla, sans serif;
+
     p {
+        padding: 2% 1% 2% 2%;
+        margin: 0% 1% 0% 1%;
+        border-bottom: silver 2px solid;
         :hover {
-            font-weight: bold;
+            transform: scale(1.2);
+            font-weight: 700;
             color: #ffe500;
+            transition-duration: all .7s;
         }
     }
 }
 
+i.material-icons.md-24.md-dark {
+    color: white;
+}
+
 .card-link {
     color: white;
-
+    
     :hover {
         font-weight: bold;
     }

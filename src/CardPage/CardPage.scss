@@ -1,0 +1,67 @@
+.individual-card {
+    padding: 5%;
+
+   
+    .tarot-title {      
+        font-family: Karla, sans serif; 
+        font-style: italic;
+        font-weight: 500;
+        font-size: 3em;
+        padding: 4% 0% 0% 0%;
+    }
+
+    .tarot-numeral {
+        font-family: Karla, sans serif; 
+        font-size: 2em;
+    }
+
+    .tarot-image {
+        margin: 15% 5% 20% 5%;
+        height: auto;
+        max-width: 85%;
+        border: 3px white solid;
+        border-radius: 15px;
+        box-shadow: 0 0 30px rgb(252, 235, 138);
+    }
+
+    .tarot-image-reversed {
+        margin: 15% 5% 20% 5%;
+        height: auto;
+        max-width: 85%;
+        transform: rotate(180deg);
+        border: 3px white solid;
+        border-radius: 15px;
+        box-shadow: 0 0 30px rgb(252, 235, 138);
+    }
+
+    .tarot-theme {
+        font-family: Karla, sans serif;
+        font-size: 2em;
+        padding: 5% 3% 5% 3%;
+        border-top: white solid 2px;
+        border-bottom: white solid 2px;
+    }
+
+    .tarot-description {
+        font-size: 1.5em;
+        font-family: Karla, sans serif;
+        font-style: italic;
+        padding: 5% 0% 5% 0%;
+    }
+
+    .tarot-back {
+        color: black;
+        font-size: 1.3em;
+        padding: 2% 5% 2% 5%;
+        background: rgb(177, 154, 19);
+        margin: 10%;
+        border-radius: 5px;
+        border: white solid 2px;
+
+        :hover {
+            color: #ffd000!important;
+            border: none;
+        }
+    }
+}
+

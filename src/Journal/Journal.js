@@ -1,5 +1,4 @@
 import React from 'react';
-// import './Journal.scss';
 import { Col, Row, Image, Card } from 'react-bootstrap';
 import './Journal.scss';
 import { Col, Row, Card } from 'react-bootstrap';
@@ -7,21 +6,28 @@ import { PropTypes } from 'prop-types';
 
 export default function Journal(props) {
     return (
-      <div>
+      <div className='main'>
         {props.journalEntries.map((entry) => {
+          const entryId = entry.id;
+          const entryDate = new Date(entry.id);
+          const entryDateString = entryDate.toString().substr(4, 11);
           return (
-              <Row className="justify-content-md-center" key={entry.id}>
+            <section className='journal-entry' key="entry.id">
+              <Row className="justify-content-md-center">
                 <Col md="auto">
-                  <Card className="mb-2" bg="dark" style={{ width: '18rem' }}>
+                  <Card className="mb-2" bg="dark" >
                     <Card.Img variant="top" src={entry.card.image} />
-                    <Card.Body>
+                    <Card.Body className='card-body'>
                       <Card.Title>
-                        {entry.text}
+                      <p className='entry-text'>{entry.text}</p>
                       </Card.Title>
+                      <p className='entry-date'>{entryDateString}</p>
                     </Card.Body>
                   </Card>
                 </Col>
               </Row>
+
+            </section>
           )
         })
         }

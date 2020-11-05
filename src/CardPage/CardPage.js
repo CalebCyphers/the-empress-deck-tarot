@@ -2,7 +2,6 @@ import { React, Component } from 'react';
 import './CardPage.scss';
 import { PropTypes } from 'prop-types';
 import { fetchCard } from '../fetch/fetch-requests';
-import CardDatabase from '../CardDatabase/CardDatabase.js'
 import { Link } from 'react-router-dom';
 
 class CardPage extends Component {
@@ -22,19 +21,33 @@ class CardPage extends Component {
 
     render() {
         let tarot = this.state.card;
+        if(!tarot.reversed) {
         return (
-            
-            <main>
+            <main className='individual-card'>
                 <section className='cardpage-info'>
-                    <p>{tarot.title}</p>
-                    <p>{tarot.numeral}</p>
-                    <img src={tarot.image} alt={tarot.title}/>
-                    <p>{tarot.theme}</p>
-                    <p>{tarot.description}</p>
-                    <Link to='/database'>Back</Link>
+                    <p className='tarot-numeral'>{tarot.numeral}</p>
+                    <p className='tarot-title'>{tarot.title}</p>
+                    <img className='tarot-image' src={tarot.image} alt={tarot.title}/>
+                    <p className='tarot-theme'>{tarot.theme}</p>
+                    <p className='tarot-description'>{tarot.description}</p>
+                    <Link className='tarot-back' to='/database'>Back</Link>
                 </section>
             </main>
-        )
+         )
+        } else {
+            return (
+                <main className='individual-card'>
+                    <section className='cardpage-info'>
+                        <p className='tarot-numeral'>{tarot.numeral}</p>
+                        <p className='tarot-title'>{tarot.title}</p>
+                        <img className='tarot-image-reversed' src={tarot.image} alt={tarot.title} />
+                        <p className='tarot-theme'>{tarot.theme}</p>
+                        <p className='tarot-description'>{tarot.description}</p>
+                        <Link className='tarot-back' to='/database'>Back</Link>
+                    </section>
+                </main>
+             )
+        }
     }
 }
 
