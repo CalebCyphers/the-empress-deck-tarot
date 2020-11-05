@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { InputGroup, Button, FormControl, Row, Col } from 'react-bootstrap'
+import { InputGroup, Button, FormControl, Row, Col } from 'react-bootstrap';
+import './ReflectionForm.scss'
 
 export default class ReflectionForm extends Component {
   constructor(props) {
@@ -24,21 +25,23 @@ export default class ReflectionForm extends Component {
 
   reflectionUpdate = (event) => {
     this.setState({[event.target.name]: event.target.value});
-    console.log(this.state.reflection)
   }
 
 
   render() {
     return (<div>
-      <InputGroup>
-        <InputGroup.Prepend>
-          <InputGroup.Text>Put your own personal reflections here</InputGroup.Text>
-        </InputGroup.Prepend>
-        <FormControl value={this.state.reflection} as="textarea" name="reflection" onChange={(event) => this.reflectionUpdate(event)} aria-label="Put your own personal reflections here" />
-      </InputGroup>
       <Row>
         <Col>
-          <Button onClick={(event) => {
+          <InputGroup>
+            <InputGroup.Prepend>
+            </InputGroup.Prepend>
+            <FormControl className='input-box' placeholder='Put your own personal reflections here.' value={this.state.reflection} as="textarea" name="reflection" onChange={(event) => this.reflectionUpdate(event)} aria-label="Put your own personal reflections here" />
+          </InputGroup>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Button className='journal-button' onClick={(event) => {
             this.buildJournalEntry(this.state.reflection, this.props.card)
             }}variant="outline-warning">Submit</Button>{' '}
         </Col>
