@@ -5,9 +5,11 @@ import { MemoryRouter as Router } from 'react-router-dom';
 import CardPage from './CardPage';
 
 describe('CardPage', () => {
+    const mockCard={
+        
+    }
 
-
-    it('should render a journal entries', () => {
+    it('should render a card and card details', () => {
         
     })
 })
