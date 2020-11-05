@@ -1,10 +1,7 @@
 import { React, Component } from 'react';
 import './CardPage.scss';
-import { Col, Row, Image } from 'react-bootstrap';
 import { PropTypes } from 'prop-types';
 import { fetchCard } from '../fetch/fetch-requests';
-import CardDatabase from '../CardDatabase/CardDatabase.js'
-import { ThemeConsumer } from 'react-bootstrap/esm/ThemeProvider';
 import { Link } from 'react-router-dom';
 
 class CardPage extends Component {
@@ -30,7 +27,7 @@ class CardPage extends Component {
                 <section className='cardpage-info'>
                     <p>{tarot.title}</p>
                     <p>{tarot.numeral}</p>
-                    <img src={tarot.image} />
+                    <img src={tarot.image} alt={tarot.title}/>
                     <p>{tarot.theme}</p>
                     <p>{tarot.description}</p>
                     <Link to='/database'>Back</Link>
@@ -38,8 +35,10 @@ class CardPage extends Component {
             </main>
         )
     }
+}
 
- }
-
+CardPage.propTypes = {
+    thisCardId: PropTypes.number
+  }
 
 export default CardPage;
