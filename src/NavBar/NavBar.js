@@ -14,11 +14,14 @@ class NavBar extends Component {
 
     render() {
         return (
-            <nav className="header">
-                <a href="/" className="header-link header-daily-reading"><MaterialIcon color='white' icon='today' /> Daily Reading</a>
-                <a href="/journal" className="header-link header-my-journal"><MaterialIcon color='white' icon='create' /> My Journal</a>
-                <a href="/database" className="header-link header-card-database"><MaterialIcon color='white' icon='find_in_page' /> Card Database</a>
-            </nav>
+            <header> 
+                <h1 className='site-header'>Empress Tarot Journal</h1>
+                <nav className="menu">
+                    <a href="/" className="menu-link menu-daily-reading"><MaterialIcon fontSize="large" icon='today' /> Daily Reading</a>
+                    <a href="/journal" className="menu-link menu-my-journal"><MaterialIcon icon='create' /> My Journal</a>
+                    <a href="/database" className="menu-link menu-card-database"><MaterialIcon icon='find_in_page' /> Card Database</a>
+                </nav>
+            </header>
         )
     }
 }
