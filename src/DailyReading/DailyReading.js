@@ -1,5 +1,5 @@
 import React from 'react';
-import './DailyReading.css';
+import './DailyReading.scss';
 import PropTypes from 'prop-types';
 import ReflectionForm from '../ReflectionForm/ReflectionForm.js'
 
