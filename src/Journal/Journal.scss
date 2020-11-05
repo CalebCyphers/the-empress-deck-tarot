@@ -1,0 +1,29 @@
+.main{
+    margin: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.journal-entry {
+
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+}
+
+.card-body {
+    color: white;
+}
+
+.entry-text {
+    font-weight: normal;
+    font-size: 1.7em;
+}
+
+.entry-date {
+    font-style: italic;
+    text-align: end;
+    font-size: .8em;
+}
+
