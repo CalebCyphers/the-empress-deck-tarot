@@ -36,22 +36,17 @@ describe('DailyReading', () => {
       render(
         <DailyReading card={mockCardReversed} />
         )
-      let reversedText = screen.getByRole('heading', { name: /the bard \(reversed\)/i })
+      let reversedText = screen.getByText(/REVERSED/i)
       expect(reversedText).toBeInTheDocument()
     })
 
     it('Should display the cards Title', () => {
-        let titleText = screen.getByRole('heading', { name: /the bard/i })
+        let titleText = screen.getByText(/the bard/i)
         expect(titleText).toBeInTheDocument()
     })
 
-    it('Should display the cards numeral', () => {
-      let numeral = screen.getByRole('heading', { name: /O/i })
-      expect(numeral).toBeInTheDocument()
-  })
-
     it('Should display the cards theme', () => {
-      let cardTheme = screen.getByRole('heading', { name: /new experiences/i })
+      let cardTheme = screen.getByText(/new experiences/i)
       expect(cardTheme).toBeInTheDocument()
     })
 
