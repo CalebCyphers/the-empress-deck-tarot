@@ -11,7 +11,7 @@ export default function Journal(props) {
           const entryDate = new Date(entry.id);
           const entryDateString = entryDate.toString().substr(4, 11);
           return (
-            <section className='journal-entry' key="entry.id">
+            <section className='journal-entry' key={entry.id}>
               <Row className="justify-content-md-center">
                 <Col md="auto">
                   <Card className="mb-2" bg="dark" >
