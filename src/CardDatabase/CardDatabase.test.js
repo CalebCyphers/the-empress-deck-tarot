@@ -34,14 +34,14 @@ describe('CardDatabase', () => {
     expect(true).toBeTruthy()
   })
 
-  it('should render the word reversed when the card data is reversed', () => {
+  it('should render the title of the card', () => {
     render(
       <Router>
         <CardDatabase deck={mockDeck} />
       </Router>
     )
 
-    let reverseText = screen.getByText('The Fighter (reverse)')
-    expect(reverseText).toBeInTheDocument()
+    let title = screen.getByText(/the fighter/i)
+    expect(title).toBeInTheDocument()
   })
 })

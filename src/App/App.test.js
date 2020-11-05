@@ -40,7 +40,7 @@ describe('App', () => {
         <App/>
       </MemoryRouter>
     )
-    const cardName = await waitFor(() => screen.getByText('The Bard (reversed)'))
+    const cardName = await waitFor(() => screen.getByText('The Bard'))
     expect(cardName).toBeInTheDocument();
   })
 
