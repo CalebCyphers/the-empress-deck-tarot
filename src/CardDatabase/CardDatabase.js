@@ -11,9 +11,7 @@ export default function CardDatabase(props) {
         {props.deck.map((card) => {
           const cardId = card.id;
           let reverseStatus;
-          //console.log(card); CHECKING TO SEE IF CARD DATA IS BEING CALLED
           if (card.reversed) {
-            //reverseStatus = 'reversed'
             reverseStatus = <MaterialIcon key={cardId} color='white' icon='autorenew' />
           } else {
             reverseStatus = ''
