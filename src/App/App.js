@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import Loader from '../Loader/Loader.js'
 import DailyReading from '../DailyReading/DailyReading.js'
 import NavBar from '../NavBar/NavBar.js'
 import { fetchCards } from '../fetch/fetch-requests';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import CardDatabase from '../CardDatabase/CardDatabase.js'
 import CardPage from '../CardPage/CardPage.js';
 import Journal from '../Journal/Journal.js';
