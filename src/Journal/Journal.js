@@ -1,8 +1,6 @@
 import React from 'react';
-// import './Journal.scss';
 import { Col, Row, Image, Card } from 'react-bootstrap';
 import './Journal.scss';
-import { Col, Row, Card } from 'react-bootstrap';
 import { PropTypes } from 'prop-types';
 
 export default function Journal(props) {
