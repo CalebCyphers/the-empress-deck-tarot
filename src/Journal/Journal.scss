@@ -1,0 +1,16 @@
+.journalEntries {
+  p {
+      :hover {
+          font-weight: bold;
+          color: #ffe500;
+      }
+  }
+}
+
+.entry-link {
+  color: white;
+
+  :hover {
+      font-weight: bold;
+  }
+}

@@ -1,14 +1,14 @@
 import React from 'react';
 // import './Journal.scss';
 import { Col, Row, Image, Card } from 'react-bootstrap';
+import './Journal.scss';
+import { Col, Row, Card } from 'react-bootstrap';
 import { PropTypes } from 'prop-types';
-import { Link } from 'react-router-dom';
 
 export default function Journal(props) {
     return (
       <div>
         {props.journalEntries.map((entry) => {
-          const entryId = entry.id;
           return (
               <Row className="justify-content-md-center" key={entry.id}>
                 <Col md="auto">

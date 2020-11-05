@@ -1,11 +1,55 @@
 # Empress Tarot
 An app built by FrontEnd Students in Mod3 designed to facilitate creativity and the challenge of learning a new technology. The app will be designed to deliver a portable tarot journal where the user can easily do readings and log their own thoughts over time.
 
+#### Built With
+
+* React.js
+* React Tesitng Library
+* Jest
+* Bootstrap
+* Backend Api using Heroku and Express
+
+
+
+#### Installation
+In your terminal:
+1. Clone the repo-
+`git@github.com:CalebCyphers/the-empress-deck-tarot.git`
+
+2. Install NPM packages- `npm install`
+
 ## Resources
 
 - [Card art](https://imgur.com/a/4tylJME)
 
-## Iteration 1 - Foundations
+## Usage
+#### MAIN PAGE DALIY READING VIEW
+<img src="" alt="" width="600">
+
+#### MAIN PAGE MOBILE DAILY READING VIEW
+<img src="" alt="" width="600">
+
+#### CARD DATABASE VIEW
+<img src="" alt="" width="600">
+
+#### MOBILE CARD DATABASE VIEW
+<img src="" alt="" width="600">
+
+#### CARD PAGE VIEW
+<img src="" alt="" width="600">
+
+#### MOBILE CARD PAGE VIEW
+<img src="" alt="" width="600">
+
+#### JOURNAL ENTRY PAGE VIEW
+<img src="" alt="'" width="600">
+
+#### MOBILE JOURNAL ENTRY PAGE VIEW
+<img src="" alt="" width="600">
+
+## Strategy to Build our App
+
+### Iteration 1 - Foundations
 
 #### Primary User Story: 
 
@@ -21,7 +65,7 @@ When a user opens the webpage, they see a tarot card
 
 #### What to Test
 
-- 
+- Test the DailyReading component, and App.
 
 ## Iteration 2 - Card Database
 
@@ -38,9 +82,9 @@ When on the website, the user sees a 'menu' icon. When the user clicks on the ic
 
 #### What to Test
 
-- card infor page should render each necessary section (subtitle, description)
+- card info page should render each necessary section (subtitle, description)
 
-## Iteration 3 - Persistant data
+### Iteration 3 - Persistant data
 
 #### Primary User Story:
 
@@ -57,3 +101,24 @@ A user can add a reflection under a card. When they click 'submit,' the website 
 
 - journal entry submition function should run on click 
 - journal entries (and necessary components) are displayed 
+
+
+## Roadmap
+
+The total time allotted for this project was approximately 10 days. Future features contemplated by the developers include the following:
+
+* Adding user options to edit or delete journal entries
+
+See the [open issues](https://github.com/CalebCyphers/the-empress-deck-tarot/issues) for a list of proposed features (and known issues).
+
+## Contact
+
+ [Caleb Cyphers](https://github.com/CalebCybers)
+
+ [Kathryn Jackson](https://github.com/kathrynljackson)
+
+ [Chadrick Dickerson](https://github.com/chadrick-d-dev)
+
+Project Link: [the-empress-tarot-deck Repo](https://github.com/CalebCyphers/the-empress-deck-tarot)
+
+
