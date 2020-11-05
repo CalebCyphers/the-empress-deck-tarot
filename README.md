@@ -91,7 +91,8 @@ A user can add a reflection under a card. When they click 'submit,' the website 
 
 ## Usage
 #### MAIN PAGE DALIY READING VIEW
-<img src="https://imgur.com/jRCK2eD" alt="" width="600">
+<img src="https://imgur.com/jRCK2eD.gif" alt="" width="600">
+
 
 
 ## Roadmap
