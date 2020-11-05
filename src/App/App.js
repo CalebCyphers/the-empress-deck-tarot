@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container } from 'react-bootstrap'
 import Loader from '../Loader/Loader.js'
 import DailyReading from '../DailyReading/DailyReading.js'
 import NavBar from '../NavBar/NavBar.js'
