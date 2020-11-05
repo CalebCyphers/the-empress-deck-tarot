@@ -91,7 +91,7 @@ A user can add a reflection under a card. When they click 'submit,' the website 
 
 ## Usage
 #### MAIN PAGE DALIY READING VIEW
-![website in action](https://imgur.com/jRCK2eD.gif)
+![website in action](https://imgur.com/lYdGF0p.gif)
 
 
 
