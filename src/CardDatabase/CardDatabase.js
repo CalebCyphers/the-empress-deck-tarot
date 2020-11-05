@@ -2,7 +2,7 @@ import React from 'react';
 import './CardDatabase.scss';
 import { PropTypes } from 'prop-types';
 import { Link } from 'react-router-dom';
-import MaterialIcon from 'material-icons-react';
+import { MaterialIcon } from 'material-icons-react';
 
 export default function CardDatabase(props) {
     return (
@@ -11,7 +11,7 @@ export default function CardDatabase(props) {
           const cardId = card.id;
           let reverseStatus;
           if (card.reversed) {
-            reverseStatus = <MaterialIcon ref='myRef' key={cardId} color='white' icon='autorenew' />
+            reverseStatus = <MaterialIcon key={cardId} color='white' icon='autorenew' />
           } else {
             reverseStatus = ''
           }
