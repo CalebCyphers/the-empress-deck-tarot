@@ -1,4 +1,6 @@
 import React from 'react';
+// import './Journal.scss';
+import { Col, Row, Image, Card } from 'react-bootstrap';
 import './Journal.scss';
 import { Col, Row, Card } from 'react-bootstrap';
 import { PropTypes } from 'prop-types';
@@ -8,8 +10,7 @@ export default function Journal(props) {
       <div>
         {props.journalEntries.map((entry) => {
           return (
-            <p key={entry.id}>
-              <Row className="justify-content-md-center">
+              <Row className="justify-content-md-center" key={entry.id}>
                 <Col md="auto">
                   <Card className="mb-2" bg="dark" style={{ width: '18rem' }}>
                     <Card.Img variant="top" src={entry.card.image} />
@@ -21,7 +22,6 @@ export default function Journal(props) {
                   </Card>
                 </Col>
               </Row>
-            </p>
           )
         })
         }

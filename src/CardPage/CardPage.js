@@ -2,6 +2,7 @@ import { React, Component } from 'react';
 import './CardPage.scss';
 import { PropTypes } from 'prop-types';
 import { fetchCard } from '../fetch/fetch-requests';
+import CardDatabase from '../CardDatabase/CardDatabase.js'
 import { Link } from 'react-router-dom';
 
 class CardPage extends Component {
