@@ -91,28 +91,7 @@ A user can add a reflection under a card. When they click 'submit,' the website 
 
 ## Usage
 #### MAIN PAGE DALIY READING VIEW
-<img src="" alt="" width="600">
-
-#### MAIN PAGE MOBILE DAILY READING VIEW
-<img src="" alt="" width="600">
-
-#### CARD DATABASE VIEW
-<img src="" alt="" width="600">
-
-#### MOBILE CARD DATABASE VIEW
-<img src="" alt="" width="600">
-
-#### CARD PAGE VIEW
-<img src="" alt="" width="600">
-
-#### MOBILE CARD PAGE VIEW
-<img src="" alt="" width="600">
-
-#### JOURNAL ENTRY PAGE VIEW
-<img src="" alt="'" width="600">
-
-#### MOBILE JOURNAL ENTRY PAGE VIEW
-<img src="" alt="" width="600">
+<img src="https://imgur.com/jRCK2eD" alt="" width="600">
 
 
 ## Roadmap
