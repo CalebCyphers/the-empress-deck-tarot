@@ -1,5 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import './NavBar.scss';
 import MaterialIcon from 'material-icons-react';
 
@@ -13,7 +14,7 @@ class NavBar extends Component {
 
     render() {
         return (
-            <header > 
+            <header> 
                 <h1 className='site-header'>Empress Tarot Journal</h1>
                 <nav className="menu">
                     <a href="/" className="menu-link menu-daily-reading"><MaterialIcon fontSize="large" icon='today' /> Daily Reading</a>

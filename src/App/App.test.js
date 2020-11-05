@@ -4,6 +4,7 @@ import { MemoryRouter } from 'react-router-dom';
 import '@testing-library/jest-dom';
 import App from './App';
 import { fetchCards } from '../fetch/fetch-requests';
+import userEvent from '@testing-library/user-event';
 
 jest.mock('../fetch/fetch-requests');
 

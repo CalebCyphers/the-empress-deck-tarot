@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Row, Card } from 'react-bootstrap';
+import { Col, Row, Image, Card } from 'react-bootstrap';
 import './Journal.scss';
 import { PropTypes } from 'prop-types';
 
@@ -7,6 +7,7 @@ export default function Journal(props) {
     return (
       <div className='main'>
         {props.journalEntries.map((entry) => {
+          const entryId = entry.id;
           const entryDate = new Date(entry.id);
           const entryDateString = entryDate.toString().substr(4, 11);
           return (
