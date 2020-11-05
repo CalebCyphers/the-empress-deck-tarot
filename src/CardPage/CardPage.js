@@ -25,9 +25,9 @@ class CardPage extends Component {
         return (
             <main className='individual-card'>
                 <section className='cardpage-info'>
-                    <p className='tarot-title'>{tarot.title}</p>
                     <p className='tarot-numeral'>{tarot.numeral}</p>
-                    <img className='tarot-image' src={tarot.image} />
+                    <p className='tarot-title'>{tarot.title}</p>
+                    <img className='tarot-image' src={tarot.image} alt={tarot.title}/>
                     <p className='tarot-theme'>{tarot.theme}</p>
                     <p className='tarot-description'>{tarot.description}</p>
                     <Link className='tarot-back' to='/database'>Back</Link>
@@ -38,9 +38,9 @@ class CardPage extends Component {
             return (
                 <main className='individual-card'>
                     <section className='cardpage-info'>
-                        <p className='tarot-title'>{tarot.title}</p>
                         <p className='tarot-numeral'>{tarot.numeral}</p>
-                        <img className='tarot-image-reversed' src={tarot.image} />
+                        <p className='tarot-title'>{tarot.title}</p>
+                        <img className='tarot-image-reversed' src={tarot.image} alt={tarot.title} />
                         <p className='tarot-theme'>{tarot.theme}</p>
                         <p className='tarot-description'>{tarot.description}</p>
                         <Link className='tarot-back' to='/database'>Back</Link>

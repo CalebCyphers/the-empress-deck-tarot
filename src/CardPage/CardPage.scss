@@ -10,27 +10,28 @@
         padding: 4% 0% 0% 0%;
     }
 
-
     .tarot-numeral {
         font-family: Amita;
         font-size: 2em;
     }
 
     .tarot-image {
-        margin: 3% 5% 20% 5%;
+        margin: 15% 5% 20% 5%;
         height: auto;
         max-width: 85%;
-        border-radius: 20px;
-        box-shadow: 0 0 30px white;
+        border: 3px white solid;
+        border-radius: 15px;
+        box-shadow: 0 0 30px rgb(252, 235, 138);
     }
 
     .tarot-image-reversed {
-        margin: 3% 5% 20% 5%;
+        margin: 15% 5% 20% 5%;
         height: auto;
         max-width: 85%;
-        border-radius: 20px;
-        box-shadow: 0 0 20px white;
         transform: rotate(180deg);
+        border: 3px white solid;
+        border-radius: 15px;
+        box-shadow: 0 0 30px rgb(252, 235, 138);
     }
 
     .tarot-theme {

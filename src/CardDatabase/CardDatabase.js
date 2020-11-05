@@ -14,7 +14,7 @@ export default function CardDatabase(props) {
           //console.log(card); CHECKING TO SEE IF CARD DATA IS BEING CALLED
           if (card.reversed) {
             //reverseStatus = 'reversed'
-            reverseStatus = <MaterialIcon color='white' icon='autorenew' />
+            reverseStatus = <MaterialIcon key={cardId} color='white' icon='autorenew' />
           } else {
             reverseStatus = ''
           }
