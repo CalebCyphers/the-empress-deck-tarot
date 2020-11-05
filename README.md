@@ -1,15 +1,21 @@
-# Empress Tarot
+# Empress Tarot Journal
 An app built by FrontEnd Students in Mod3 designed to facilitate creativity and the challenge of learning a new technology. The app will be designed to deliver a portable tarot journal where the user can easily do readings and log their own thoughts over time.
 
 ## Overview
 
-#### Built With
+- **[Deployed Site]()**
+- **[Site Repository](https://github.com/CalebCyphers/the-empress-deck-tarot)**
+- **[API Repository]()**
+- **[Deployed API]()**
+
+#### Technologies Used
 
 * React.js
 * React Tesitng Library
 * Jest
 * Bootstrap
-* Backend Api using Heroku and Express
+* Heroku
+* Express
 
 #### Installation
 In your terminal:
@@ -18,9 +24,9 @@ In your terminal:
 
 2. Install NPM packages- `npm install`
 
-## Resources
-
+## Artwork
 - [Card art](https://imgur.com/a/4tylJME)
+- [Retrieved From _WeirdWorks.com_](https://weird.works/peculiar-products/adventurers-tarot-empress-deck)
 
 
 ## Strategy to Build our App
@@ -48,7 +54,7 @@ When a user opens the webpage, they see a tarot card
 
 - Test the DailyReading component, and App.
 
-## Iteration 2 - Card Database
+### Iteration 2 - Card Database
 
 #### Primary User Story:
 
@@ -124,7 +130,3 @@ See the [open issues](https://github.com/CalebCyphers/the-empress-deck-tarot/iss
  [Kathryn Jackson](https://github.com/kathrynljackson)
 
  [Chadrick Dickerson](https://github.com/chadrick-d-dev)
-
-Project Link: [the-empress-tarot-deck Repo](https://github.com/CalebCyphers/the-empress-deck-tarot)
-
-
