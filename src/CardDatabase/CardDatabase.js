@@ -17,8 +17,8 @@ export default function CardDatabase(props) {
             reverseStatus = ''
           }
           return (
-            <p>
-              <Link className='card-link' key={cardId} to={'/database/'+cardId}>{`${card.numeral}. ${card.title}`} {reverseStatus}</Link> 
+            <p key={card.id}>
+              <Link className='card-link'  to={'/database/'+cardId}>{`${card.numeral}. ${card.title}`} {reverseStatus}</Link> 
             </p>
           )
         })
