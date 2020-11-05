@@ -11,7 +11,7 @@ export default function CardDatabase(props) {
           const cardId = card.id;
           let reverseStatus;
           if (card.reversed) {
-            reverseStatus = <MaterialIcon key={cardId} color='white' icon='autorenew' />
+            reverseStatus = <MaterialIcon ref='myRef' key={cardId} color='white' icon='autorenew' />
           } else {
             reverseStatus = ''
           }
