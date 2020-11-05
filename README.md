@@ -1,11 +1,42 @@
-# Empress Tarot
+# Empress Tarot Journal
 An app built by FrontEnd Students in Mod3 designed to facilitate creativity and the challenge of learning a new technology. The app will be designed to deliver a portable tarot journal where the user can easily do readings and log their own thoughts over time.
 
-## Resources
+## Overview
 
+- **[Deployed Site]()**
+- **[Site Repository](https://github.com/CalebCyphers/the-empress-deck-tarot)**
+- **[API Repository]()**
+- **[Deployed API]()**
+
+#### Technologies Used
+
+* React.js
+* React Tesitng Library
+* Jest
+* Bootstrap
+* Heroku
+* Express
+
+#### Installation
+In your terminal:
+1. Clone the repo-
+`git@github.com:CalebCyphers/the-empress-deck-tarot.git`
+
+2. Install NPM packages- `npm install`
+
+## Artwork
 - [Card art](https://imgur.com/a/4tylJME)
+- [Retrieved From _WeirdWorks.com_](https://weird.works/peculiar-products/adventurers-tarot-empress-deck)
 
-## Iteration 1 - Foundations
+
+## Strategy to Build our App
+
+A big component of this project was to teach ourselves a new technology. We chose to build an API and use it to build a working app. Before beginning our project, we met and created [our DTR](https://docs.google.com/document/d/1u0vh6wgpC_LHcpd9ImehJk20vpEHG_Pr5gLici4ajzo/edit?usp=sharing). This step gave us the opportunity to discuss our expectations, preferred schedule, and work style. Once we completed our DTR, we began to collaborate on a wireframe to help us convey our ideas and choose the best ones for our project. 
+
+#### Wireframe: 
+![Screen Shot 2020-11-04 at 10 20 50 PM](https://user-images.githubusercontent.com/65988644/98193797-3d4c1700-1edb-11eb-9ee8-dd4319830adb.png)
+
+### Iteration 1 - Foundations
 
 #### Primary User Story: 
 
@@ -21,9 +52,9 @@ When a user opens the webpage, they see a tarot card
 
 #### What to Test
 
-- 
+- Test the DailyReading component, and App.
 
-## Iteration 2 - Card Database
+### Iteration 2 - Card Database
 
 #### Primary User Story:
 
@@ -38,9 +69,9 @@ When on the website, the user sees a 'menu' icon. When the user clicks on the ic
 
 #### What to Test
 
-- card infor page should render each necessary section (subtitle, description)
+- card info page should render each necessary section (subtitle, description)
 
-## Iteration 3 - Persistant data
+### Iteration 3 - Persistant data
 
 #### Primary User Story:
 
@@ -57,3 +88,45 @@ A user can add a reflection under a card. When they click 'submit,' the website 
 
 - journal entry submition function should run on click 
 - journal entries (and necessary components) are displayed 
+
+## Usage
+#### MAIN PAGE DALIY READING VIEW
+<img src="" alt="" width="600">
+
+#### MAIN PAGE MOBILE DAILY READING VIEW
+<img src="" alt="" width="600">
+
+#### CARD DATABASE VIEW
+<img src="" alt="" width="600">
+
+#### MOBILE CARD DATABASE VIEW
+<img src="" alt="" width="600">
+
+#### CARD PAGE VIEW
+<img src="" alt="" width="600">
+
+#### MOBILE CARD PAGE VIEW
+<img src="" alt="" width="600">
+
+#### JOURNAL ENTRY PAGE VIEW
+<img src="" alt="'" width="600">
+
+#### MOBILE JOURNAL ENTRY PAGE VIEW
+<img src="" alt="" width="600">
+
+
+## Roadmap
+
+The total time allotted for this project was approximately 10 days. Future features contemplated by the developers include the following:
+
+* Adding user options to edit or delete journal entries
+
+See the [open issues](https://github.com/CalebCyphers/the-empress-deck-tarot/issues) for a list of proposed features (and known issues).
+
+## Contact
+
+ [Caleb Cyphers](https://github.com/CalebCybers)
+
+ [Kathryn Jackson](https://github.com/kathrynljackson)
+
+ [Chadrick Dickerson](https://github.com/chadrick-d-dev)

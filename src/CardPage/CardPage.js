@@ -49,8 +49,10 @@ class CardPage extends Component {
              )
         }
     }
+}
 
- }
-
+CardPage.propTypes = {
+    thisCardId: PropTypes.number
+  }
 
 export default CardPage;

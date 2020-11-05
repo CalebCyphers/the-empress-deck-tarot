@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { InputGroup, Button, FormControl, Row, Col } from 'react-bootstrap';
 import './ReflectionForm.scss'
+import { PropTypes } from 'prop-types';
+
 
 export default class ReflectionForm extends Component {
   constructor(props) {
@@ -48,4 +50,10 @@ export default class ReflectionForm extends Component {
       </Row>
     </div>)
   }
+}
+
+ReflectionForm.prototype = {
+  card: PropTypes.object,
+  journalEntries: PropTypes.array,
+  updateState: PropTypes.func
 }

@@ -1,8 +1,8 @@
 import React from 'react';
-import './Journal.scss';
 import { Col, Row, Image, Card } from 'react-bootstrap';
+import './Journal.scss';
+import { Col, Row, Card } from 'react-bootstrap';
 import { PropTypes } from 'prop-types';
-import { Link } from 'react-router-dom';
 
 export default function Journal(props) {
     return (
@@ -12,7 +12,7 @@ export default function Journal(props) {
           const entryDate = new Date(entry.id);
           const entryDateString = entryDate.toString().substr(4, 11);
           return (
-            <section className='journal-entry'>
+            <section className='journal-entry' key="entry.id">
               <Row className="justify-content-md-center">
                 <Col md="auto">
                   <Card className="mb-2" bg="dark" >
@@ -26,6 +26,7 @@ export default function Journal(props) {
                   </Card>
                 </Col>
               </Row>
+
             </section>
           )
         })

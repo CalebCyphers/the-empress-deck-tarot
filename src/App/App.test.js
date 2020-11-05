@@ -1,9 +1,11 @@
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
-import { BrowserRouter as Router, Route, Switch, Redirect, MemoryRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 import '@testing-library/jest-dom';
 import App from './App';
 import { fetchCards } from '../fetch/fetch-requests';
+import userEvent from '@testing-library/user-event';
+
 jest.mock('../fetch/fetch-requests');
 
 describe('App', () => {
@@ -49,7 +51,7 @@ describe('App', () => {
         <App/>
       </MemoryRouter>
     )
-    let navbar = await waitFor(() => screen.getByRole('banner'))
+    let navbar = await waitFor(() => screen.getByText('My Journal'))
     expect(navbar).toBeInTheDocument()
   })
 })

@@ -1,6 +1,5 @@
 import React from 'react';
-import './DailyReading.scss';
-import { Col, Row, Image, InputGroup, FormControl, Container, Button } from 'react-bootstrap';
+import './DailyReading.css';
 import PropTypes from 'prop-types';
 import ReflectionForm from '../ReflectionForm/ReflectionForm.js'
 
@@ -32,5 +31,7 @@ export default function DailyReading(props) {
 }
 
 DailyReading.propTypes = {
-  card: PropTypes.object
+  card: PropTypes.object,
+  journalEntries: PropTypes.array,
+  updateState: PropTypes.func
 }
