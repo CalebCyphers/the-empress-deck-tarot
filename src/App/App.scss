@@ -9,8 +9,8 @@
 }
 
 .App {
-  text-align: center;
-  background-color: #231c35;
+  background: linear-gradient(0deg, rgba(46,28,113,1) 2%, rgba(35,28,53,1) 35%);  text-align: center;
+  // background-color: #231c35;
   min-height: 100vh;
   /* display: flex; */
   flex-direction: column;
@@ -21,4 +21,8 @@
 
 .App-link {
   color: #61dafb;
+}
+
+#blockColorblindContent {
+  display: none;
 }

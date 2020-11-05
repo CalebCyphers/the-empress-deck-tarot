@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap'
 import Loader from '../Loader/Loader.js'
@@ -75,10 +75,10 @@ class App extends Component {
               return <CardPage thisCardId={cardId}/>
             }} />
             <Route exact path="/journal" render={() => (
-              <Container>
+              <section>
                 <NavBar />
                 <Journal journalEntries={this.state.journalEntries} />
-              </Container>
+              </section>
             )}/>
           </div>
         </Router>
