@@ -6,7 +6,7 @@ An app built by FrontEnd Students in Mod3 designed to facilitate creativity and 
 - **[Site Repository](https://github.com/CalebCyphers/the-empress-deck-tarot)**
 - **[API Repository](https://github.com/kathrynljackson/empress-tarot-api)**
 - **[Deployed API](https://empress-tarot-api.herokuapp.com/cards)**
-- **[Learning Plan](https://github.com/CalebCyphers/the-empress-deck-tarot/milestone/3)
+- **[Learning Plan](https://github.com/CalebCyphers/the-empress-deck-tarot/milestone/3)**
 
 #### Technologies Used
 
