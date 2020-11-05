@@ -7,7 +7,7 @@ import Journal from './Journal';
 describe('Journal', () => {
     const mockJournalEntries = [
         {
-            "id":1604530542486,
+            "id":1604530886486,
             "text":"This makes so much sense! I have been so sharp with my words in the most manipulative way. I really want to change this behavior. I will do my best! Thank you Aliens!",
             "card":{
                 "id":31,
@@ -20,7 +20,7 @@ describe('Journal', () => {
             }
         },
         {
-            "id":1604530886486,
+            "id":1604533333486,
             "text":"I'm worried, I didn't know the characters in these cards were real and could get me!",
             "card":{
                 "id":34,

@@ -23,6 +23,6 @@ describe('ReflectionForm', () => {
             <ReflectionForm journalEntries={mockEntries} updateState={mockUpdateState} card={mockCard}/>
         )
         expect(screen.getByText('Submit')).toBeInTheDocument()
-        expect(screen.getByText('Put your own personal reflections here')).toBeInTheDocument()
+        expect(screen.getByRole('textbox', { name: /put your own personal reflections here/i })).toBeInTheDocument()
     })
 })
