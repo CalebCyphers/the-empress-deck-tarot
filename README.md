@@ -1,6 +1,8 @@
 # Empress Tarot
 An app built by FrontEnd Students in Mod3 designed to facilitate creativity and the challenge of learning a new technology. The app will be designed to deliver a portable tarot journal where the user can easily do readings and log their own thoughts over time.
 
+## Overview
+
 #### Built With
 
 * React.js
@@ -8,8 +10,6 @@ An app built by FrontEnd Students in Mod3 designed to facilitate creativity and 
 * Jest
 * Bootstrap
 * Backend Api using Heroku and Express
-
-
 
 #### Installation
 In your terminal:
@@ -22,32 +22,13 @@ In your terminal:
 
 - [Card art](https://imgur.com/a/4tylJME)
 
-## Usage
-#### MAIN PAGE DALIY READING VIEW
-<img src="" alt="" width="600">
-
-#### MAIN PAGE MOBILE DAILY READING VIEW
-<img src="" alt="" width="600">
-
-#### CARD DATABASE VIEW
-<img src="" alt="" width="600">
-
-#### MOBILE CARD DATABASE VIEW
-<img src="" alt="" width="600">
-
-#### CARD PAGE VIEW
-<img src="" alt="" width="600">
-
-#### MOBILE CARD PAGE VIEW
-<img src="" alt="" width="600">
-
-#### JOURNAL ENTRY PAGE VIEW
-<img src="" alt="'" width="600">
-
-#### MOBILE JOURNAL ENTRY PAGE VIEW
-<img src="" alt="" width="600">
 
 ## Strategy to Build our App
+
+A big component of this project was to teach ourselves a new technology. We chose to build an API and use it to build a working app. Before beginning our project, we met and created [our DTR](https://docs.google.com/document/d/1u0vh6wgpC_LHcpd9ImehJk20vpEHG_Pr5gLici4ajzo/edit?usp=sharing). This step gave us the opportunity to discuss our expectations, preferred schedule, and work style. Once we completed our DTR, we began to collaborate on a wireframe to help us convey our ideas and choose the best ones for our project. 
+
+#### Wireframe: 
+![Screen Shot 2020-11-04 at 10 20 50 PM](https://user-images.githubusercontent.com/65988644/98193797-3d4c1700-1edb-11eb-9ee8-dd4319830adb.png)
 
 ### Iteration 1 - Foundations
 
@@ -101,6 +82,31 @@ A user can add a reflection under a card. When they click 'submit,' the website 
 
 - journal entry submition function should run on click 
 - journal entries (and necessary components) are displayed 
+
+## Usage
+#### MAIN PAGE DALIY READING VIEW
+<img src="" alt="" width="600">
+
+#### MAIN PAGE MOBILE DAILY READING VIEW
+<img src="" alt="" width="600">
+
+#### CARD DATABASE VIEW
+<img src="" alt="" width="600">
+
+#### MOBILE CARD DATABASE VIEW
+<img src="" alt="" width="600">
+
+#### CARD PAGE VIEW
+<img src="" alt="" width="600">
+
+#### MOBILE CARD PAGE VIEW
+<img src="" alt="" width="600">
+
+#### JOURNAL ENTRY PAGE VIEW
+<img src="" alt="'" width="600">
+
+#### MOBILE JOURNAL ENTRY PAGE VIEW
+<img src="" alt="" width="600">
 
 
 ## Roadmap
